@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login — ABC College</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body data-page="login">
+
+  <div id="navbar-placeholder"></div>
+
+  <div class="auth-wrapper py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+          <div class="auth-card shadow-sm overflow-hidden">
+            <div class="row g-0">
+              <div class="col-md-5 auth-side p-4 d-none d-md-flex flex-column justify-content-center">
+                <div class="mb-3" id="authLogo"></div>
+                <h3 class="text-white">Welcome back</h3>
+                <p style="color:var(--beige)">Log in to register for events, track your registrations and submit feedback.</p>
+              </div>
+              <div class="col-md-7 p-4 p-lg-5">
+                <h3 class="mb-1">Login</h3>
+                <p class="text-muted small mb-4">Enter your credentials to access your account.</p>
+                <div class="alert alert-danger d-none" id="loginError"></div>
+                <form id="loginForm">
+                  <div class="mb-3">
+                    <label class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="email" required placeholder="you@student.abccollege.edu">
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" required placeholder="••••••••">
+                  </div>
+                  <button type="submit" id="loginBtn" class="btn btn-brand-primary w-100 mt-2">Login</button>
+                </form>
+                <p class="text-center small text-muted mt-4 mb-0">Don't have an account? <a href="register.html">Register here</a></p>
+                <p class="text-center small text-muted mt-2 mb-0">Admin demo login: <code>admin@abccollege.edu</code> / <code>Admin@123</code></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+  <script>document.addEventListener("DOMContentLoaded",()=>{const l=document.getElementById("authLogo");if(l)l.innerHTML=logoSVG(64);});</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <title>My Profile — ABC College</title>
+  <link href="../css/style.css" rel="stylesheet">
+</head>
+<body data-student-page="profile">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-2 p-0 d-none d-lg-block" id="sidebar-placeholder"></div>
+      <div class="col-lg-10 p-0">
+        <nav class="navbar bg-navy d-lg-none px-3"><span class="text-white fw-bold">ABC COLLEGE</span><a class="text-white small" href="../index.html">Website</a></nav>
+        <main class="p-4 p-lg-5">
+<h2>My Profile</h2><div class="divider-accent"></div>
+<div class="row g-4">
+  <div class="col-lg-8"><div class="dashboard-card p-4">
+    <form id="profileForm"><div class="row g-3">
+      <div class="col-12 d-flex align-items-center gap-3"><img id="profileImagePreview" class="rounded-circle" width="80" height="80" style="object-fit:cover" alt="Profile"><input type="file" id="profileImageInput" accept="image/*" class="form-control w-auto"></div>
+      <div class="col-md-6"><label class="form-label">Name</label><input id="profileName" class="form-control" required></div>
+      <div class="col-md-6"><label class="form-label">Student ID</label><input id="profileStudentId" class="form-control" disabled></div>
+      <div class="col-md-6"><label class="form-label">Email</label><input id="profileEmail" class="form-control" disabled></div>
+      <div class="col-md-6"><label class="form-label">Phone</label><input id="profilePhone" class="form-control"></div>
+      <div class="col-md-6"><label class="form-label">Department</label><select id="profileDepartment" class="form-select"><option value="">Select department</option><option>Computer Science</option><option>Electronics</option><option>Mechanical</option><option>Civil</option><option>Business Administration</option></select></div>
+      <div class="col-md-6"><label class="form-label">Year</label><select id="profileYear" class="form-select"><option value="">Select</option><option value="1">1st Year</option><option value="2">2nd Year</option><option value="3">3rd Year</option><option value="4">4th Year</option></select></div>
+      <div class="col-12"><button type="submit" id="profileSaveBtn" class="btn btn-brand-primary">Save Changes</button></div>
+    </div></form></div></div>
+  <div class="col-lg-4"><div class="dashboard-card p-4"><h5>Change Password</h5>
+    <form id="passwordForm"><div class="mb-3"><label class="form-label">Current Password</label><input type="password" id="currentPassword" class="form-control" required></div>
+    <div class="mb-3"><label class="form-label">New Password</label><input type="password" id="newPassword" class="form-control" minlength="6" required></div>
+    <button class="btn btn-maroon w-100">Update Password</button></form></div></div>
+</div>
+        </main>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/config.js"></script>
+  <script src="../js/main.js"></script>
+  
+  <script src="../js/events.js"></script>
+  <script src="../js/student.js"></script>
+</body>
+</html>

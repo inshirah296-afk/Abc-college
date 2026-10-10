@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — ABC College</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body data-page="contact">
+
+  <div id="navbar-placeholder"></div>
+
+  <section class="bg-navy text-white py-5">
+    <div class="container text-center">
+      <h1 class="text-white mb-1">Get in Touch</h1>
+      <p class="mb-0" style="color:var(--beige)">Questions about an event or the portal? We're happy to help.</p>
+    </div>
+  </section>
+
+  <section class="section-pad">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-5">
+          <p class="section-heading-eyebrow">Contact Details</p>
+          <h2>Reach the Student Affairs Office</h2>
+          <div class="divider-accent"></div>
+          <ul class="list-unstyled mt-3">
+            <li class="mb-3 d-flex gap-3"><i class="bi bi-geo-alt text-purple fs-5"></i><span>123 College Road, Knowledge City, 600001</span></li>
+            <li class="mb-3 d-flex gap-3"><i class="bi bi-envelope text-purple fs-5"></i><span>events@abccollege.edu</span></li>
+            <li class="mb-3 d-flex gap-3"><i class="bi bi-telephone text-purple fs-5"></i><span>+91 98765 43210</span></li>
+            <li class="mb-3 d-flex gap-3"><i class="bi bi-clock text-purple fs-5"></i><span>Mon – Sat, 9:00 AM – 5:00 PM</span></li>
+          </ul>
+        </div>
+        <div class="col-lg-7">
+          <div class="card-abc p-4">
+            <form id="contactForm" onsubmit="event.preventDefault(); document.getElementById('contactSuccess').classList.remove('d-none'); this.reset();">
+              <div class="alert alert-success d-none" id="contactSuccess">Thanks for reaching out — we'll get back to you shortly.</div>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label">Full Name</label>
+                  <input type="text" class="form-control" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Email</label>
+                  <input type="email" class="form-control" required>
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Subject</label>
+                  <input type="text" class="form-control" required>
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Message</label>
+                  <textarea class="form-control" rows="4" required></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-brand-primary">Send Message</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

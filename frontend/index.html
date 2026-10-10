@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABC College — Event Management Portal</title>
+  <meta name="description" content="Discover, participate and celebrate campus life at ABC College.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body data-page="home">
+
+  <div id="navbar-placeholder"></div>
+
+  <!-- Hero -->
+  <section class="hero-section">
+    <div class="hero-ring" style="width:420px;height:420px;top:-120px;right:-120px;"></div>
+    <div class="hero-ring" style="width:260px;height:260px;bottom:-80px;right:120px;"></div>
+    <div class="container position-relative">
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <p class="text-uppercase small mb-2" style="color:var(--beige);letter-spacing:0.05em;">ABC College Event Management Portal</p>
+          <h1>Discover. Participate. Celebrate.</h1>
+          <p class="lead my-3">One place to browse every technical, cultural and sporting event on campus, register in a click, and keep track of everything you've joined — from hackathons to hostel-day dance-offs.</p>
+          <div class="d-flex gap-3 flex-wrap mt-4">
+            <a href="events.html" class="btn btn-brand-primary btn-lg"><i class="bi bi-compass me-2"></i>Explore Events</a>
+            <a href="login.html" class="btn btn-brand-outline btn-lg"><i class="bi bi-box-arrow-in-right me-2"></i>Student Login</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="section-pad bg-cream">
+    <div class="container">
+      <div class="row g-3">
+        <div class="col-6 col-md-3">
+          <div class="stat-card"><div class="stat-number" id="statTotalEvents">—</div><div class="stat-label">Total Events</div></div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-card"><div class="stat-number" id="statStudents">—</div><div class="stat-label">Registered Students</div></div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-card"><div class="stat-number" id="statUpcoming">—</div><div class="stat-label">Upcoming Events</div></div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-card"><div class="stat-number" id="statCompleted">—</div><div class="stat-label">Completed Events</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured / Open events -->
+  <section class="section-pad">
+    <div class="container">
+      <p class="section-heading-eyebrow">Open Now</p>
+      <div class="d-flex justify-content-between align-items-end mb-2">
+        <h2 class="mb-0">Featured Events</h2>
+        <a href="events.html" class="small">View all <i class="bi bi-arrow-right"></i></a>
+      </div>
+      <div class="divider-accent"></div>
+      <div class="row g-4" id="featuredEvents">
+        <div class="col-12 loading-spinner-wrap"><div class="spinner-border text-purple"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="section-pad bg-beige">
+    <div class="container">
+      <p class="section-heading-eyebrow">Browse by Interest</p>
+      <h2>Event Categories</h2>
+      <div class="divider-accent"></div>
+      <div class="d-flex flex-wrap gap-2 mt-3" id="categoryList"></div>
+    </div>
+  </section>
+
+  <!-- Upcoming + Announcements -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-8">
+          <p class="section-heading-eyebrow">Save the Date</p>
+          <h2>Upcoming Events</h2>
+          <div class="divider-accent"></div>
+          <div class="row g-4" id="upcomingEvents">
+            <div class="col-12 loading-spinner-wrap"><div class="spinner-border text-purple"></div></div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <p class="section-heading-eyebrow">Notices</p>
+          <h2>Announcements</h2>
+          <div class="divider-accent"></div>
+          <div id="homeAnnouncements"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/events.js"></script>
+</body>
+</html>

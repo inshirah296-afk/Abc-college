@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <title>Browse & Register — ABC College</title>
+  <link href="../css/style.css" rel="stylesheet">
+</head>
+<body data-student-page="browse">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-2 p-0 d-none d-lg-block" id="sidebar-placeholder"></div>
+      <div class="col-lg-10 p-0">
+        <nav class="navbar bg-navy d-lg-none px-3"><span class="text-white fw-bold">ABC COLLEGE</span><a class="text-white small" href="../index.html">Website</a></nav>
+        <main class="p-4 p-lg-5">
+<h2>Browse &amp; Register</h2><p class="text-muted">Pick an event, open its details and press Register Now.</p><div class="divider-accent"></div>
+<div class="dashboard-card p-3 mb-4"><div class="row g-2">
+  <div class="col-md-4"><input id="searchInput" class="form-control" placeholder="Search events..."></div>
+  <div class="col-6 col-md-2"><select id="categoryFilter" class="form-select"></select></div>
+  <div class="col-6 col-md-2"><select id="statusFilter" class="form-select"><option value="Registration Open">Registration Open</option><option value="Upcoming">Upcoming</option><option value="">All Status</option></select></div>
+  <div class="col-6 col-md-2"><input type="date" id="dateFilter" class="form-control"></div>
+  <div class="col-6 col-md-2"><select id="sortSelect" class="form-select"><option value="dateAsc">Soonest</option><option value="dateDesc">Latest</option></select></div>
+</div></div>
+<div class="row g-4" id="eventsGrid"></div><div id="paginationWrap" class="mt-4"></div>
+        </main>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/config.js"></script>
+  <script src="../js/main.js"></script>
+  
+  <script src="../js/events.js"></script>
+  <script src="../js/student.js"></script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+/* =========================================================
+   ABC COLLEGE — Design tokens
+   Palette (fixed by brief): Purple / Cream / Maroon / Beige / Navy
+   Typography: Source Serif 4 for headings (academic, elegant),
+               Inter for body/UI text (clean, highly legible)
+   ========================================================= */
+:root {
+  --purple: #6A3D8F;
+  --purple-dark: #55316f;
+  --cream: #FFF8E7;
+  --maroon: #800020;
+  --maroon-dark: #5e0017;
+  --beige: #E8DCC4;
+  --navy: #172A46;
+  --navy-light: #223a5e;
+  --ink: #2c2a26;
+  --white: #ffffff;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --shadow-soft: 0 6px 20px rgba(23, 42, 70, 0.08);
+  --shadow-lift: 0 12px 28px rgba(23, 42, 70, 0.14);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--ink);
+  background-color: var(--cream);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, .font-serif {
+  font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+  color: var(--navy);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+a { color: var(--purple); text-decoration: none; }
+a:hover { color: var(--maroon); }
+
+.text-purple { color: var(--purple) !important; }
+.text-maroon { color: var(--maroon) !important; }
+.text-navy { color: var(--navy) !important; }
+.bg-navy { background-color: var(--navy) !important; }
+.bg-purple { background-color: var(--purple) !important; }
+.bg-cream { background-color: var(--cream) !important; }
+.bg-beige { background-color: var(--beige) !important; }
+.bg-maroon { background-color: var(--maroon) !important; }
+
+/* ---------- Buttons ---------- */
+.btn-brand-primary {
+  background-color: var(--purple);
+  border-color: var(--purple);
+  color: var(--white);
+  font-weight: 600;
+  padding: 0.65rem 1.6rem;
+  border-radius: var(--radius-sm);
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+.btn-brand-primary:hover, .btn-brand-primary:focus {
+  background-color: var(--purple-dark);
+  border-color: var(--purple-dark);
+  color: var(--white);
+  transform: translateY(-1px);
+}
+.btn-brand-outline {
+  background-color: transparent;
+  border: 1.5px solid var(--white);
+  color: var(--white);
+  font-weight: 600;
+  padding: 0.62rem 1.6rem;
+  border-radius: var(--radius-sm);
+  transition: all 0.2s ease;
+}
+.btn-brand-outline:hover {
+  background-color: var(--white);
+  color: var(--navy);
+}
+.btn-maroon {
+  background-color: var(--maroon);
+  border-color: var(--maroon);
+  color: var(--white);
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+}
+.btn-maroon:hover { background-color: var(--maroon-dark); border-color: var(--maroon-dark); color: var(--white); }
+.btn-outline-navy {
+  border: 1.5px solid var(--navy);
+  color: var(--navy);
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+}
+.btn-outline-navy:hover { background-color: var(--navy); color: var(--white); }
+
+/* ---------- Navbar ---------- */
+.navbar-abc {
+  background-color: var(--navy);
+  padding-top: 0.85rem;
+  padding-bottom: 0.85rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+.navbar-abc .navbar-brand { display: flex; align-items: center; gap: 0.65rem; }
+.navbar-abc .navbar-brand .brand-name { color: var(--white); font-family: "Source Serif 4", serif; font-weight: 700; font-size: 1.2rem; line-height: 1.1; }
+.navbar-abc .navbar-brand .brand-sub { color: var(--beige); font-size: 0.68rem; letter-spacing: 0.02em; }
+.navbar-abc .nav-link { color: rgba(255,255,255,0.85); font-weight: 500; margin: 0 0.35rem; }
+.navbar-abc .nav-link:hover, .navbar-abc .nav-link.active { color: var(--white); border-bottom: 2px solid var(--maroon); }
+
+/* Emblem logo, built from CSS/SVG shapes only */
+.abc-emblem {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+}
+
+/* ---------- Hero ---------- */
+.hero-section {
+  background: linear-gradient(180deg, var(--navy) 0%, var(--navy-light) 100%);
+  color: var(--white);
+  padding: 5rem 0 6rem;
+  position: relative;
+  overflow: hidden;
+}
+.hero-section h1 { color: var(--white); font-size: clamp(2.1rem, 4vw, 3.2rem); }
+.hero-section .lead { color: var(--beige); max-width: 560px; }
+.hero-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+/* ---------- Cards ---------- */
+.card-abc {
+  background-color: var(--white);
+  border: 1px solid var(--beige);
+  border-radius: var(--radius-md);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+}
+.card-abc:hover { transform: translateY(-4px); box-shadow: var(--shadow-lift); }
+.event-card-img { height: 170px; object-fit: cover; width: 100%; background-color: var(--beige); }
+.card-category-badge {
+  background-color: var(--purple);
+  color: var(--white);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: 20px;
+  letter-spacing: 0.02em;
+}
+.status-badge { font-size: 0.72rem; font-weight: 600; padding: 0.3rem 0.65rem; border-radius: 20px; }
+.status-upcoming { background-color: #e6ecf5; color: var(--navy); }
+.status-open { background-color: #e7f6ec; color: #1c6b3a; }
+.status-closed { background-color: #f5e6e6; color: var(--maroon); }
+.status-completed { background-color: var(--beige); color: var(--ink); }
+.status-cancelled { background-color: #f2d9d9; color: var(--maroon-dark); }
+
+/* ---------- Sections ---------- */
+.section-pad { padding: 3.5rem 0; }
+.section-heading-eyebrow { color: var(--purple); font-weight: 600; font-size: 0.85rem; margin-bottom: 0.35rem; }
+.divider-accent { width: 56px; height: 3px; background-color: var(--maroon); border-radius: 2px; margin: 0.75rem 0 1.25rem; }
+
+.stat-card { background-color: var(--white); border: 1px solid var(--beige); border-radius: var(--radius-md); padding: 1.6rem 1rem; text-align: center; }
+.stat-card .stat-number { font-family: "Source Serif 4", serif; font-size: 2.3rem; color: var(--purple); font-weight: 700; }
+.stat-card .stat-label { color: var(--navy); font-size: 0.9rem; }
+
+/* ---------- Announcements ---------- */
+.announcement-item { border-left: 4px solid var(--purple); background-color: var(--white); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 0.85rem 1rem; margin-bottom: 0.75rem; }
+.announcement-item.priority-urgent { border-left-color: var(--maroon); }
+.announcement-item.priority-important { border-left-color: var(--purple); }
+.announcement-item.priority-normal { border-left-color: var(--beige); }
+
+/* ---------- Footer ---------- */
+.footer-abc { background-color: var(--navy); color: rgba(255,255,255,0.75); padding: 3rem 0 1.5rem; }
+.footer-abc h6 { color: var(--white); font-family: "Source Serif 4", serif; }
+.footer-abc a { color: rgba(255,255,255,0.75); }
+.footer-abc a:hover { color: var(--white); }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.12); margin-top: 2rem; padding-top: 1.25rem; font-size: 0.85rem; }
+
+/* ---------- Auth pages ---------- */
+.auth-wrapper { min-height: calc(100vh - 76px); display: flex; align-items: center; background-color: var(--cream); }
+.auth-card { background-color: var(--white); border: 1px solid var(--beige); border-radius: var(--radius-md); box-shadow: var(--shadow-soft); }
+.auth-side { background: linear-gradient(180deg, var(--navy), var(--navy-light)); color: var(--white); border-radius: var(--radius-md) 0 0 var(--radius-md); }
+
+/* ---------- Dashboard ---------- */
+.sidebar-abc { background-color: var(--navy); min-height: 100vh; }
+.sidebar-abc .nav-link { color: rgba(255,255,255,0.8); padding: 0.65rem 1.1rem; border-radius: var(--radius-sm); margin-bottom: 0.15rem; font-weight: 500; }
+.sidebar-abc .nav-link:hover { background-color: rgba(255,255,255,0.08); color: var(--white); }
+.sidebar-abc .nav-link.active { background-color: var(--purple); color: var(--white); }
+.dashboard-card { background-color: var(--white); border: 1px solid var(--beige); border-radius: var(--radius-md); }
+.dash-icon-circle { width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; color: var(--white); }
+
+/* ---------- Forms ---------- */
+.form-control:focus, .form-select:focus { border-color: var(--purple); box-shadow: 0 0 0 0.2rem rgba(106, 61, 143, 0.15); }
+label { font-weight: 500; color: var(--navy); }
+
+/* ---------- Utility ---------- */
+.empty-state { text-align: center; padding: 3rem 1rem; color: #8a8578; }
+.empty-state i { font-size: 2.6rem; color: var(--beige); }
+.loading-spinner-wrap { text-align: center; padding: 2.5rem 0; }
+
+@media (max-width: 767px) {
+  .hero-section { padding: 3rem 0 3.5rem; text-align: center; }
+  .hero-section .lead { margin-left: auto; margin-right: auto; }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browse Events — ABC College</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body data-page="events">
+
+  <div id="navbar-placeholder"></div>
+
+  <section class="bg-navy text-white py-5">
+    <div class="container">
+      <h1 class="text-white mb-1">Browse Events</h1>
+      <p class="mb-0" style="color:var(--beige)">Find your next hackathon, fest or workshop.</p>
+    </div>
+  </section>
+
+  <section class="section-pad">
+    <div class="container">
+      <!-- Filters -->
+      <div class="card-abc p-3 mb-4">
+        <div class="row g-2 align-items-center">
+          <div class="col-md-4">
+            <div class="input-group">
+              <span class="input-group-text bg-white"><i class="bi bi-search"></i></span>
+              <input type="text" id="searchInput" class="form-control" placeholder="Search events...">
+            </div>
+          </div>
+          <div class="col-6 col-md-2">
+            <select id="categoryFilter" class="form-select"><option>Loading...</option></select>
+          </div>
+          <div class="col-6 col-md-2">
+            <select id="statusFilter" class="form-select">
+              <option value="">All Status</option>
+              <option value="Upcoming">Upcoming</option>
+              <option value="Registration Open">Registration Open</option>
+              <option value="Registration Closed">Registration Closed</option>
+              <option value="Completed">Completed</option>
+              <option value="Cancelled">Cancelled</option>
+            </select>
+          </div>
+          <div class="col-6 col-md-2">
+            <input type="date" id="dateFilter" class="form-control">
+          </div>
+          <div class="col-6 col-md-2">
+            <select id="sortSelect" class="form-select">
+              <option value="dateAsc">Date: Soonest</option>
+              <option value="dateDesc">Date: Latest</option>
+              <option value="newest">Recently Added</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4" id="eventsGrid">
+        <div class="col-12 loading-spinner-wrap"><div class="spinner-border text-purple"></div></div>
+      </div>
+      <div id="paginationWrap" class="mt-4"></div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/events.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <title>Manage Students — ABC College</title>
+  <link href="../css/style.css" rel="stylesheet">
+</head>
+<body data-admin-page="students">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-2 p-0 d-none d-lg-block" id="sidebar-placeholder"></div>
+      <div class="col-lg-10 p-0">
+        <nav class="navbar bg-navy d-lg-none px-3"><span class="text-white fw-bold">ABC COLLEGE</span><a class="text-white small" href="../index.html">Website</a></nav>
+        <main class="p-4 p-lg-5">
+<h2>Manage Students</h2><div class="divider-accent"></div>
+<div class="dashboard-card p-3"><input id="studentSearch" class="form-control mb-3" placeholder="Search by name, ID or email...">
+<div class="table-responsive"><table class="table align-middle mb-0"><thead><tr><th>ID</th><th>Name</th><th>Department</th><th>Year</th><th>Email</th><th>Phone</th><th></th></tr></thead><tbody id="studentsTableBody"></tbody></table></div></div>
+        </main>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/config.js"></script>
+  <script src="../js/main.js"></script>
+  
+  <script src="../js/events.js"></script>
+  <script src="../js/admin.js"></script>
+</body>
+</html>
